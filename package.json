@@ -1,5 +1,41 @@
 {
+  "name": "express_backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx ts-node ./src/index.ts",
+    "start": "node dist/index.js",
+    "dev": "nodemon ./src/index.ts",
+    "add:service": "ts-node src/utils/commands/createService.ts",
+    "add:model": "ts-node src/utils/commands/createModel.ts",
+    "add:controller": "ts-node src/utils/commands/createController.ts",
+    "add:route": "ts-node src/utils/commands/createRoute.ts",
+    "add:pattern": "ts-node src/utils/commands/generatePattern.ts",
+    "seed": "ts-node prisma/seed.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^22.5.4",
+    "nodemon": "^3.1.4",
+    "prisma": "^5.19.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
   "dependencies": {
-    "cors": "^2.8.5"
+    "@prisma/client": "^5.19.1",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^5.0.0",
+    "express-validator": "^7.2.0",
+    "jsonwebtoken": "^9.0.2"
   }
 }
